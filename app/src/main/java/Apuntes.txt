@@ -1,0 +1,26 @@
+1º El layout principal es el main activity y el kt principal es el MainActivity
+
+2º A nivel de módulo, se importa el viewBinding, dentro de android { }
+    - buildFeatures {
+              viewBinding true
+          }
+
+3º Se hacen los pasos del MainActivity
+
+4º El segundo layout y actividad se crea en el paso nº 8 del MainActivity
+    - Una de las ventajas de usar el asistente para crear la actividad es
+      que éste incluye automáticamente la declaración de la nueva actividad
+      en el manifiesto de la aplicación.
+    - Si no se usa, hay que añadir la actividad en el manifiesto, o saltará una excepción
+      en la llamada al método startActivity()
+
+5º Cambiar el nombre del layout activity_detail a detail_activity
+
+6º Añadir a nivel de módulo, en dependencies { }:
+    - implementation 'androidx.core:core-ktx:X.X.X'
+    - La librería de soporte para Kotlin proporciona en el artefacto core-ktx,
+      una función constructora de un Bundle a partir de un varargs de objetos Pair
+      (par clave-valor), llamada bundleOf(pair...). Así, podemos construir un bundle
+      y establecerlo como extras del intent mediante el método putExtras(bundle).
+
+7º Para saber lo que es un Pair, está en el Tema 5: Proyecto ExplicitIntent

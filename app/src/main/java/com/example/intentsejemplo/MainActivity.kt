@@ -1,9 +1,15 @@
 package com.example.intentsejemplo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.os.bundleOf
 import com.example.intentsejemplo.databinding.MainActivityBinding
 import com.example.intentsejemplo.utils.hideSoftKeyboard
+
+
+private const val EXTRA_NAME = "EXTRA_NAME"
+private const val EXTRA_AGE = "EXTRA_AGE"
 
 class MainActivity : AppCompatActivity() {
 
@@ -83,13 +89,14 @@ class MainActivity : AppCompatActivity() {
         // contains comprueba que el valor introducido está entre el validRange
         val validRange = 1..130
         return validRange.contains(age)
-
     }
 
     // 8º
+    // Hay que crear la actividad DetailActivity
+    // Ver Tema 5 -> Proyecto ExplicitIntent -> Asistente de nueva actividad
     private fun navigateToDetailActivity(name: String, age: Int){
-        binding.btnShow.hideSoftKeyboard()
-        // TODO: Navigate to DetailActivity -- Tema 5 -> Proyecto ExplicitIntent
+        // 10º
+        startActivity(DetailActivity.newIntent(this, name, age))
     }
 
 
