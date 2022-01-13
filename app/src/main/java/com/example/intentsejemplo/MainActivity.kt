@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setupViews()
     }
 
-    // 9º
+    // 8º
     private fun setupViews() {
         binding.txtAge.setOnEditorActionListener { _, _, _ ->
             btnShowOnClick()
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnShow.setOnClickListener { btnShowOnClick() }
     }
 
-    // 7º
+    // 6º
     private fun btnShowOnClick() {
         val name = binding.txtName.text.toString()
         val age = binding.txtAge.text.toString()
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         return validRange.contains(age)
     }
 
-    // 8º
+    // 7º
     // Hay que crear la actividad DetailActivity
     // Ver Tema 5 -> Proyecto ExplicitIntent -> Asistente de nueva actividad
     private fun navigateToDetailActivity(name: String, age: Int){
