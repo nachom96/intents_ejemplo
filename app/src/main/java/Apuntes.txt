@@ -1,3 +1,5 @@
+PROYECTO EXPLICIT INTENT
+
 1º El layout principal es el main activity y el kt principal es el MainActivity
 
 2º A nivel de módulo, se importa el viewBinding, dentro de android { }

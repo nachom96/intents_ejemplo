@@ -31,6 +31,9 @@ class DetailActivity : AppCompatActivity() {
         name = intent.getStringExtra(EXTRA_NAME).toString()
         age = intent.getIntExtra(EXTRA_AGE, 0)
 
+        //11º Se muestran los datos
+        Toast.makeText(applicationContext, ("Usuario: $name, Edad: $age"), Toast.LENGTH_SHORT).show()
+
     }
 
 
